@@ -24,7 +24,6 @@ try:
     with open("oszczep.json", "r") as plik_json:
         dane_json = json.load(plik_json)
         
-        # ZMIANA 2: Stworzenie listy wyników za pomocą list comprehension
         lista_wynikow = [
             {"zawodnik": zawodnik["zawodnik"], "najdluzszy_rzut": max(zawodnik["rzuty"])}
             for zawodnik in dane_json
