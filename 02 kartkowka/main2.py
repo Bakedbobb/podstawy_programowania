@@ -9,7 +9,7 @@ try:
         dane = plik.read().splitlines()
         for linia in dane:
             zawodnik, wyniki = linia.split(":")
-            najlepszy = max(float(x) for x in wyniki.split())
+        najlepszy = max(float(x) for x in wyniki.split())
             
             zawodnik_w = f"{zawodnik}: {najlepszy}\n"
             with open(f"dane_wyjsciowe.txt", "a") as plik_txt:
